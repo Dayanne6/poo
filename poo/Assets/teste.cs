@@ -9,18 +9,52 @@ public class Teste : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Fusca.AtribuirNome("olavo");
-        Fusca.AtribuirCor("azul");
+        Fusca.AtribuirNome(" olavo ");
+        Fusca.AtribuirCor(" azul ");
         Fusca.AtribuirNumero_de_rodas(4);
         Fusca.AtribuirPreço(2050.90f);
 
-        Debug.Log("0" + Fusca.AtribuirNome() + "é" + Fusca.AtribuirCor() + "tem" + Fusca.Numero_de_rodas() + " e custa R$ " + Fusca.Preço());
+        Debug.Log("0 " + Fusca.AtribuirNome() + " é " + Fusca.AtribuirCor() + " tem " + Fusca.Numero_de_rodas() + " rodas " + " e custa R$ " + Fusca.Preço());
         
-        Gol.AtribuirNome("Olavo");
-        Gol.AtribuirCor("azul");
+        Gol.AtribuirNome(" Olaf ");
+        Gol.AtribuirCor(" Amarelo ");
         Gol.AtribuirNumero_de_rodas(4);
-        Gol.AtribuirPreço(2050.90f);
-        Debug.Log("0" + Gol.Nome());
+        Gol.AtribuirPreço(3050.90f);
+        Debug.Log("0" + Gol.AtribuirNome() + "é " + Gol.AtribuirCor() + "tem  " + Gol.Numero_de_rodas() + " rodas " + " e custa R$ " + Gol.Preço());
+
+        if (Fusca.ComparePreço(Gol))
+        {
+            Debug.Log("O carro " + Fusca.AtribuirNome() + " é mais caro do que o carro " + Gol.AtribuirNome());
+        }
+        else
+        {
+            Debug.Log("O carro " + Fusca.AtribuirNome() + " é mais barato do que o carro " + Gol.AtribuirNome());
+        }
+        
+       
+        caminhao.AtribuirTipoDeCarroceria("Larga");
+
+        caminhao.AtribuirNumero_de_rodas(8);
+
+        caminhao.AtribuirPreço(6000.00f);
+
+        caminhao.AtribuirCor("Azul");
+
+        caminhao.AtribuirNome("Caminhão do Falstão");
+
+        if (Fusca.ComparePreço(caminhao))
+        {
+            Debug.Log("0 Carro " +  Fusca.AtribuirNome() + "é mais caro do que o " + caminhao.NomeDoCarro());
+        }
+
+        else
+
+        {
+            Debug.Log("0 Carro " + Fusca.AtribuirNome() + "é mais barato do que o" + caminhao.NomeDoCarro());
+        } 
+
+
+
     }
 
 

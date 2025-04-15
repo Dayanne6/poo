@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f121d7-85c5-41d5-bf45-6b07682b34a4" name="Changes" comment="" />
+    <list default="true" id="09f121d7-85c5-41d5-bf45-6b07682b34a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.poo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.poo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/teste.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/teste.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +28,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -92,7 +95,8 @@
       <workItem from="1744121696109" duration="175000" />
       <workItem from="1744121886593" duration="1857000" />
       <workItem from="1744632656674" duration="188000" />
-      <workItem from="1744633005648" duration="3934000" />
+      <workItem from="1744633005648" duration="4024000" />
+      <workItem from="1744724312859" duration="4275000" />
     </task>
     <servers />
   </component>
