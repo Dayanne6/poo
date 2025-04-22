@@ -5,6 +5,8 @@ public class Teste : MonoBehaviour
     Carro Fusca = new Carro(); 
     Carro Gol = new Carro();
 
+    private Caminhão caminhão = new Caminhão();
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,25 +34,25 @@ public class Teste : MonoBehaviour
         }
         
        
-        caminhao.AtribuirTipoDeCarroceria("Larga");
+        caminhão.AtribuirTipoDeCarroceria("Larga");
 
-        caminhao.AtribuirNumero_de_rodas(8);
+        caminhão.AtribuirNumero_de_rodas(8);
 
-        caminhao.AtribuirPreço(6000.00f);
+        caminhão.AtribuirPreço(6000.00f);
 
-        caminhao.AtribuirCor("Azul");
+        caminhão.AtribuirCor("Azul");
 
-        caminhao.AtribuirNome("Caminhão do Falstão");
+        caminhão.AtribuirNome("Caminhão do Falstão");
 
-        if (Fusca.ComparePreço(caminhao))
+        if (Fusca.ComparePreço(caminhão))
         {
-            Debug.Log("0 Carro " +  Fusca.AtribuirNome() + "é mais caro do que o " + caminhao.NomeDoCarro());
+            Debug.Log("0 Carro " +  Fusca.AtribuirNome() + "é mais caro do que o " + caminhão.AtribuirNome());
         }
 
         else
 
         {
-            Debug.Log("0 Carro " + Fusca.AtribuirNome() + "é mais barato do que o" + caminhao.NomeDoCarro());
+            Debug.Log("0 Carro " + Fusca.AtribuirNome() + "é mais barato do que o" + caminhão.AtribuirNome());
         } 
 
 
