@@ -58,12 +58,17 @@ public class Teste : MonoBehaviour
 
 
     }
+    
+    
+    //====================================
+   joao.Atribuirnome;
+   joao.Atribuirenergia;
+   joao.Atribuirforca_ataque;
+   joao.Atribuirforca_do_pulo;
+   joao.Atribuirvelocidade;
+   joao.Atribuirnumero_de_pes;
+   joao.Atribuirnumero_de_maos;
 
 
-// Update is called once per frame
-    void Update()
-    {
-
-    }
 
 }
