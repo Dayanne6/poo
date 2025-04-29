@@ -1,31 +1,19 @@
 using UnityEngine;
 
-public class Caminhão : Carro
+using UnityEngine;
+
+public class caminhao : carro
 {
-    public string AtribuirTipodeCarroceria;
+    private string tipo_de_carroceria;
 
     public void AtribuirTipoDeCarroceria(string tipo_de_carroceria)
-
     {
-        this.AtribuirTipodeCarroceria = tipo_de_carroceria;
+        this.tipo_de_carroceria = tipo_de_carroceria;
     }
 
     public string TipoDeCarroceria()
-
     {
-        return this. AtribuirTipodeCarroceria;
-    }
-    
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+        return this.tipo_de_carroceria;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

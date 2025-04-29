@@ -1,74 +1,105 @@
 using UnityEngine;
 
-public class Teste : MonoBehaviour
+
+   using TMPro;
+using UnityEngine;
+
+public class teste : MonoBehaviour
 {
-    Carro Fusca = new Carro(); 
-    Carro Gol = new Carro();
-
-    private Caminhão caminhão = new Caminhão();
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    carro fusca = new carro();
+    carro gol = new carro();
+    
+    caminhao caminhao = new caminhao();
+    private personagem joao = new personagem();
+    Inimigo ork = new  Inimigo();
+    
+          void Start()
     {
-        Fusca.AtribuirNome(" olavo ");
-        Fusca.AtribuirCor(" azul ");
-        Fusca.AtribuirNumero_de_rodas(4);
-        Fusca.AtribuirPreço(2050.90f);
+        fusca. AtribuirNome("Fusca de dayday");
+        fusca.AtribuirCor("Verde");
+        fusca.AtribuirNumero_de_rodas(4);
+        fusca.AtribuirPreco(2050.90f);
+        Debug.Log(" 0 " + fusca.NomeDoCarro() + " é " + fusca.CorDoCarro() +  "tem"  + fusca.Numero_de_rodas() +" e custa R$" + fusca.Preco());
 
-        Debug.Log("0 " + Fusca.AtribuirNome() + " é " + Fusca.AtribuirCor() + " tem " + Fusca.Numero_de_rodas() + " rodas " + " e custa R$ " + Fusca.Preço());
+
+        gol. AtribuirNome("Fusca de lulu");
+        gol.AtribuirCor("rosa");
+        gol.AtribuirNumero_de_rodas(4);
+        gol.AtribuirPreco(3000.90f);
         
-        Gol.AtribuirNome(" Olaf ");
-        Gol.AtribuirCor(" Amarelo ");
-        Gol.AtribuirNumero_de_rodas(4);
-        Gol.AtribuirPreço(3050.90f);
-        Debug.Log("0" + Gol.AtribuirNome() + "é " + Gol.AtribuirCor() + "tem  " + Gol.Numero_de_rodas() + " rodas " + " e custa R$ " + Gol.Preço());
-
-        if (Fusca.ComparePreço(Gol))
+        if (fusca.ComparePreco(fusca))
         {
-            Debug.Log("O carro " + Fusca.AtribuirNome() + " é mais caro do que o carro " + Gol.AtribuirNome());
+            Debug.Log("O carro " + fusca.NomeDoCarro() + "é mais caro do que o carro " + gol.NomeDoCarro());
         }
         else
         {
-            Debug.Log("O carro " + Fusca.AtribuirNome() + " é mais barato do que o carro " + Gol.AtribuirNome());
+            Debug.Log("O carro " + fusca.NomeDoCarro() + "é mais barato do que o carro " + gol.NomeDoCarro());
         }
         
+        
+        caminhao.AtribuirTipoDeCarroceria("Larga");
+        caminhao.AtribuirNumero_de_rodas(8);
+        caminhao.AtribuirPreco(6000.00f);
+        caminhao.AtribuirCor("Azul");
+        caminhao.AtribuirNome("Caminhão da nyny");
        
-        caminhão.AtribuirTipoDeCarroceria("Larga");
-
-        caminhão.AtribuirNumero_de_rodas(8);
-
-        caminhão.AtribuirPreço(6000.00f);
-
-        caminhão.AtribuirCor("Azul");
-
-        caminhão.AtribuirNome("Caminhão do Falstão");
-
-        if (Fusca.ComparePreço(caminhão))
+        
+        //fusca.AtribuitTipoDeCarroceria("Larga");
+        
+        if (fusca.ComparePreco(caminhao))
+            
         {
-            Debug.Log("0 Carro " +  Fusca.AtribuirNome() + "é mais caro do que o " + caminhão.AtribuirNome());
+            Debug.Log("O carro " + fusca.NomeDoCarro() + "é mais caro do que o carro " + caminhao.NomeDoCarro());
+        }
+        else
+        {
+            Debug.Log("O carro " + fusca.NomeDoCarro() + "é mais barato do que o carro " + caminhao.NomeDoCarro());
+        }
+
+        
+        
+
+//=====================================================================
+
+        joao.AtribuirNome(" João Roberto 11");
+        joao.AtribuirEnergia(10); 
+        joao.AtribuirForca_Ataque(12);
+        joao.Atribuirforca_do_pulo(6);
+        joao.AtribuirVelocidade(8);
+        joao.AtribuirNumero_de_pes(2);
+        joao.AtribuirNumero_de_maos(2);
+
+        
+     
+        ork.AtribuirNome(" ork gob");
+        ork.AtribuirEnergia(23); 
+        ork.AtribuirForca_Ataque(15);
+        ork.Atribuirforca_do_pulo(8);
+        ork.AtribuirVelocidade(6);
+        ork.AtribuirNumero_de_pes(2);
+        ork.AtribuirNumero_de_maos(4);
+        ork.AtribuirArma(Inimigo.ArmaDoInimigo.MACHADO);
+        ork.AtribuirArmadura(Inimigo.ArmaduraDoInimigo.COURO);
+
+        if (joao.Energia() > ork.Forca_Ataque())
+        {
+            Debug.Log("o joao sobreviveu ao ataque do ork" + joao.getNome());
         }
 
         else
-
         {
-            Debug.Log("0 Carro " + Fusca.AtribuirNome() + "é mais barato do que o" + caminhão.AtribuirNome());
-        } 
-
-
+            Debug.Log("0" + joao.getNome() +  "aonde tem" + joao.Energia() + "energia");
+        }
 
     }
     
+
     
-    //====================================
-   joao.Atribuirnome;
-   joao.Atribuirenergia;
-   joao.Atribuirforca_ataque;
-   joao.Atribuirforca_do_pulo;
-   joao.Atribuirvelocidade;
-   joao.Atribuirnumero_de_pes;
-   joao.Atribuirnumero_de_maos;
+    
 
-
-
+    
+    void Update()
+    {
+        
+    }
 }
