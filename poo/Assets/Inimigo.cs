@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Inimigo : personagem
+public class inimigodoper : Personagem
 {
+    
+    
     public enum ArmaDoInimigo
     {
         ESPADA, MACHADO, ADAGA 
@@ -39,7 +41,7 @@ public class Inimigo : personagem
         return arma;
     }
 
-    public void DanoDoInimigo()
+    public int DanoDoInimigo()
     {
         int dano = 0;
 
@@ -58,17 +60,12 @@ public class Inimigo : personagem
                 break;
         }
 
-          
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+        return dano;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    // Update is called once per frame
+   
 }
