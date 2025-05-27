@@ -1,55 +1,19 @@
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
-    private Rigidbody _rigdibody;
-
-    private float velocidade = 10;
+    public Animator animator;
+    private MovimentoPlayer movimentoPlayer;
+    public float velocidadeDaAnimacao = 1;
     
-
     void Start()
     {
-        velocidade = gameObject.GetComponent<Personagem>().Velocidade();
-        _rigdibody = GetComponent<Rigidbody>();
+        movimentoPlayer = GetComponent<MovimentoPlayer>();
     }
-    
     void Update()
     {
-        Vector3 posicao = transform.position;
-
-
-
-        // esquerda
-        if (Input.GetKey(KeyCode.D))
-        {
-            posicao.x = posicao.x + velocidade * Time.deltaTime;
-        }
-
-
-        //direita
-
-        if (Input.GetKey(KeyCode.A))
-            
-            
-            
-        {
-            posicao.x = transform.position.x - velocidade * Time.deltaTime;
-        }
-
-
-        // cima Z+
-        if (Input.GetKey(KeyCode.W))
-        {
-            posicao.z = transform.position.z + velocidade * Time.deltaTime;
-        }
-
-        //baixo Z-
-        if (Input.GetKey(KeyCode.S))
-        {
-            posicao.z = transform.position.z - velocidade * Time.deltaTime;
-
-        }
-        
-        transform.position = posicao;
+        animator.SetBool("Andando", movimentoPlayer.andando);
+        animator.speed = velocidadeDaAnimacao;
     }
 }
+

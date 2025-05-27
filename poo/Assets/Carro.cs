@@ -1,23 +1,23 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class carro
+public class Carro
 {
     private string nome;
-    private int numero_de_rodas;
     private string cor;
+    private int numero_de_rodas;
     private float preco;
-
-    public string getNome()
-    {
-        return this.nome;
-    }
 
     public void AtribuirNome(string nome)
     {
         this.nome = nome;
     }
 
+    public string NomeDoCarro()
+    {
+        return this.nome;
+    }
+   
+   
     public void AtribuirCor(string cor)
     {
         this.cor = cor;
@@ -28,10 +28,6 @@ public class carro
         return this.cor;
     }
 
-    public string NomeDoCarro()
-    {
-        return this.nome;
-    }
     public void AtribuirNumero_de_rodas(int numero_de_rodas)
     {
         this.numero_de_rodas = numero_de_rodas;
@@ -41,11 +37,10 @@ public class carro
     {
         return this.numero_de_rodas;
     }
-
+   
     public void AtribuirPreco(float preco)
     {
         this.preco = preco;
-
     }
 
     public float Preco()
@@ -53,17 +48,14 @@ public class carro
         return this.preco;
     }
 
-    public bool ComparePreco(carro carro)
+    public bool ComparePreco( Carro carro )
     {
-        if (ComparePreco(carro))
+        if (this.preco > carro.Preco())
         {
             return true;
         }
-
-
-
-
-
         return false;
     }
+
+
 }
